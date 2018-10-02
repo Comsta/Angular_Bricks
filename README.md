@@ -26,3 +26,10 @@ export class DropdownDirective {
 	}
 }
 ```
+
+Get class on Mouse event
+``` javascript
+ @HostListener('mousemove', ['$event']) onMouseMove(event: MouseEvent) {
+    const eventSource = (window.event) ? event.srcElement.className : (<Element>event.target).className;
+ ..
+```
